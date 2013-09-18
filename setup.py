@@ -1,5 +1,8 @@
 from setuptools import setup, find_packages
 
+with open('requirements.txt') as reqfile:
+	requirements = reqfile.read().splitlines()
+
 setup(
 	name='Django-Accounts',
 	author='Binary Birch Tree',
@@ -12,6 +15,7 @@ setup(
 	long_description=open('README.rst').read(),
 	packages=find_packages(),
 	include_package_data=True,
+	install_requires=requirements,
 	classifiers=[
 		'Programming Language :: Python',
 		'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
