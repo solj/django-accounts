@@ -28,7 +28,7 @@ from models import UserSignup
 class ProfileFormView(FormView):
 	form_class = ProfileForm
 	template_name = 'accounts/profile_form.html'
-	success_url = reverse_lazy('accounts_profile_summary')
+	success_url = reverse_lazy('accounts_profile_home')
 
 	def get_initial(self):
 		return {
